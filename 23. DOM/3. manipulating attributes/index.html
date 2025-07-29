@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attribute Manipulation Example</title>
+  <style>
+    #myImage {
+      width: 200px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Attribute Manipulation</h2>
+
+  <img id="myImage" src="https://via.placeholder.com/200" alt="Sample Image">
+
+  <br><br>
+
+  <button onclick="changeSrc()">Change Image Source</button>
+  <button onclick="removeAlt()">Remove Alt Attribute</button>
+  <button onclick="toggleBorder()">Toggle Border</button>
+  <button onclick="showAttributes()">Show Current Attributes</button>
+
+  <script>
+    const image = document.getElementById("myImage");
+
+    function changeSrc() {
+      image.setAttribute("src", "https://via.placeholder.com/200/FF0000/FFFFFF");
+    }
+
+    function removeAlt() {
+      image.removeAttribute("alt");
+      alert("Alt attribute removed");
+    }
+
+    function toggleBorder() {
+      const hasBorder = image.hasAttribute("style");
+      if (hasBorder) {
+        image.removeAttribute("style");
+      } else {
+        image.setAttribute("style", "border: 5px dashed red;");
+      }
+    }
+
+    function showAttributes() {
+      alert("src: " + image.getAttribute("src") + 
+            "\nalt: " + image.getAttribute("alt"));
+    }
+  </script>
+
+</body>
+</html>

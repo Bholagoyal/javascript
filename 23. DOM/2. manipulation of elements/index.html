@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Divs with IDs and Classes</title>
+  <style>
+    /* Common classes */
+    .box {
+      padding: 15px;
+      margin: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .highlight {
+      background-color: #ffffcc;
+    }
+
+    .shadow {
+      box-shadow: 2px 2px 5px gray;
+    }
+
+    /* Specific ID styling */
+    #header {
+      background-color: #e0f7fa;
+      color: #006064;
+    }
+
+    #sidebar {
+      background-color: #fce4ec;
+      width: 200px;
+      float: left;
+    }
+
+    #content {
+      background-color: #e8f5e9;
+      margin-left: 220px;
+    }
+
+    #footer {
+      background-color: #ede7f6;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="header" class="box shadow">
+    <h1>Website Header</h1>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="box highlight">
+    <h2>Sidebar</h2>
+    <p>Navigation Links</p>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content" class="box shadow highlight">
+    <h2>Main Content</h2>
+    <p>This is the main content area with multiple classes.</p>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer" class="box">
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>
